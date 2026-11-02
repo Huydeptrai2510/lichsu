@@ -4,8 +4,8 @@
 
 /* ===== CẤU HÌNH ===== */
 const CONFIG={
-  supabaseUrl:"",   // ĐIỀN: Project URL, dạng https://xxxx.supabase.co
-  supabaseKey:"",   // ĐIỀN: publishable key (sb_publishable_...) hoặc anon key. TUYỆT ĐỐI KHÔNG dùng service_role
+  supabaseUrl:"https://cuvfdokwjdejzyhzkkpz.supabase.co",   // ĐIỀN: Project URL, dạng https://xxxx.supabase.co
+  supabaseKey:"sb_publishable_L3mlQPAc3NlGO5kf52g2sg_ELo172N9",   // ĐIỀN: publishable key (sb_publishable_...) hoặc anon key. TUYỆT ĐỐI KHÔNG dùng service_role
   sound:false,      // true: video chính có tiếng sau lần chạm/bấm phím đầu tiên (trình duyệt không cho tự phát có tiếng)
   useModels:true    // false: luôn dùng ảnh chân dung thay vì mô hình 3D
 };
