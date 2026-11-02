@@ -3,8 +3,8 @@
 
 /* ===== CẤU HÌNH NGƯỜI DÙNG ===== */
 const CONFIG={
-  appwriteEndpoint:"https://cloud.appwrite.io/v1", // endpoint trong Appwrite Console > Settings (hoặc URL máy chủ tự host)
-  appwriteProject:"",   // Project ID (để trống = chạy local)
+  appwriteEndpoint:"https://nyc.cloud.appwrite.io/v1", // endpoint trong Appwrite Console > Settings (hoặc URL máy chủ tự host)
+  appwriteProject:"6ae75bd0000dc1985d5a",   // Project ID (để trống = chạy local)
   appwriteDatabase:"",  // Database ID
   appwriteTable:"",     // Table ID (bảng presentation_state)
   appwriteRow:"state",  // Row ID cố định
