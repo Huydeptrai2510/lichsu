@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Đông Nam Á trước làn sóng thực dân và con đường của Xiêm</title>
+<meta name="description" content="Website trình chiếu lịch sử: xâm lược Đông Nam Á và công cuộc cải cách của Xiêm (Lịch sử 11).">
+<meta name="theme-color" content="#0e0c0a">
+<link rel="icon" href="data:,">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;700&family=Source+Sans+3:wght@400;600&display=swap">
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<div id="app">
+  <div id="stage" role="region" aria-label="Trình chiếu lịch sử"></div>
+  <div id="wipe"></div>
+</div>
+<!-- Giao diện điều khiển duy nhất: hai nút ‹ và › -->
+<nav id="nav" aria-label="Điều hướng slide">
+  <button id="prev" class="nb" aria-label="Slide trước">‹</button>
+  <button id="next" class="nb" aria-label="Slide sau">›</button>
+</nav>
+<div id="net" role="status" aria-live="polite" hidden></div>
+<pre id="debug" hidden></pre>
+<div id="loading">Đang chuẩn bị trình chiếu…</div>
+<div id="err" hidden>Không thể khởi động trình chiếu. Hãy tải lại trang (Ctrl+Shift+D để xem chi tiết lỗi).</div>
+<div id="rot">Xoay ngang màn hình để xem trình chiếu.</div>
+<noscript><p style="padding:40px;color:#e9dfc8">Trang này cần bật JavaScript.</p></noscript>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js"></script>
+<script src="./script.js"></script>
+</body>
+</html>
