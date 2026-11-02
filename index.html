@@ -2,201 +2,399 @@
 <html lang="vi">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Đông Nam Á trước làn sóng thực dân – Lịch sử 11, Bài 5</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#080b12">
+<title>Đông Nam Á trước làn sóng thực dân — Lịch sử 11</title>
 <link rel="stylesheet" href="style.css">
-<!--
-CẦN ĐỐI CHIẾU VỚI SGK trước khi trình bày (nội dung soạn theo dàn ý Bài 5 và kiến thức lịch sử phổ thông):
-- Tên bài và các mục của Bài 5, Lịch sử 11, Kết nối tri thức.
-- Các mốc: Malacca 1511; Philippines 1565; Công ty Đông Ấn Hà Lan 1602; Pênang 1786, Singapore 1819;
-  ba cuộc chiến Anh–Miến 1824–1886; Pháp 1858–1893; Mỹ chiếm Philippines 1898.
-- Xiêm: Hiệp ước Bowring 1855; cải cách Rama V; các lần nhượng đất 1893, 1904–1907, 1909; thỏa thuận Anh–Pháp 1896.
--->
+<!-- Thư viện hiệu ứng và trình xem mô hình 3D. Có thể bỏ CDN nếu trình chiếu ngoại tuyến. -->
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js" defer></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@google/model-viewer@4.1.0/dist/model-viewer.min.js"></script>
 </head>
 <body>
-<div class="bar" aria-hidden="true"></div>
-<main>
+<main class="presentation" id="presentation" aria-label="Bài thuyết trình Lịch sử 11">
+  <div class="ambient ambient-one" aria-hidden="true"></div>
+  <div class="ambient ambient-two" aria-hidden="true"></div>
+  <div class="film-grain" aria-hidden="true"></div>
+  <div class="topline"><span class="brand-mark">HỒ SƠ LỊCH SỬ <i>／</i> 05</span><span class="topline-center">ĐÔNG NAM Á · THẾ KỶ XVI—XX</span><span class="live-indicator"><i></i> PRESENTATION MODE</span></div>
+  <div class="progress-track" aria-hidden="true"><span class="progress-fill" id="progressFill"></span></div>
 
-<!-- 1. Mở đầu -->
-<section class="slide intro" id="s1">
-  <div class="stage">
-    <div class="ph bg" data-file="trai-dat.mp4">
-      <div class="globe"></div>
-      <video autoplay muted playsinline><source src="trai-dat.mp4" type="video/mp4"></video>
+  <!-- SLIDE 01 · OPENING -->
+  <section class="slide is-active intro" id="s1" data-transition="cinematic" aria-hidden="false">
+    <div class="media-layer">
+      <div class="earth-glow"></div>
+      <video class="media-video" autoplay muted loop playsinline>
+        <source src="trai-dat.mp4" type="video/mp4">
+      </video>
+      <img class="media-image map-overlay" src="ban-do-dna.jpg" alt="Bản đồ Đông Nam Á">
+      <div class="image-placeholder">Tài nguyên nền: trai-dat.mp4 · ban-do-dna.jpg</div>
     </div>
-    <div class="ph bg map" data-file="ban-do-dna.jpg"><img src="ban-do-dna.jpg" alt=""></div>
-    <div class="c">
-      <p class="k l1">Lịch sử 11, Kết nối tri thức với cuộc sống</p>
-      <h1 class="l2">Đông Nam Á<br>trước làn sóng thực dân</h1>
-      <p class="sub l3">Bài 5. Quá trình xâm lược và cai trị của chủ nghĩa thực dân ở Đông Nam Á; cải cách ở Xiêm</p>
+    <div class="slide-content opening-content">
+      <p class="eyebrow reveal-item">LỊCH SỬ 11 <span>·</span> KẾT NỐI TRI THỨC VỚI CUỘC SỐNG</p>
+      <div class="opening-rule"></div>
+      <h1 class="display-title reveal-item">ĐÔNG NAM Á<br><em>TRƯỚC LÀN SÓNG</em><br>THỰC DÂN</h1>
+      <p class="opening-sub reveal-item">Quá trình xâm lược và cai trị của chủ nghĩa thực dân ở Đông Nam Á; cải cách ở Xiêm.</p>
+      <div class="opening-bottom reveal-item"><span>HỒ SƠ 01 / 12</span><span>CUỘC CHUYỂN MÌNH CỦA MỘT KHU VỰC</span></div>
     </div>
-  </div>
-</section>
+    <div class="corner-frame" aria-hidden="true"></div>
+  </section>
 
-<!-- 2. Bối cảnh -->
-<section class="slide" id="s2">
-  <div class="stage t-fade">
-    <div class="ph bg dim" data-file="ban-do-dna.jpg"><img src="ban-do-dna.jpg" alt=""></div>
-    <div class="c">
-      <p class="k r">Bối cảnh</p>
-      <h2 class="big r" style="--d:1">Nằm giữa hai đại dương, giàu tài nguyên: Đông Nam Á trở thành đích ngắm của tư bản phương Tây.</h2>
-      <div class="trio">
-        <p class="r" style="--d:2">Hương liệu, hồ tiêu, thiếc, gạo, cao su: nguồn lợi lớn cho thương mại thế giới.</p>
-        <p class="r" style="--d:3">Con đường biển nối Ấn Độ Dương với Thái Bình Dương đi qua khu vực.</p>
-        <p class="r" style="--d:4">Công nghiệp châu Âu cần nguyên liệu, thị trường; nhiều vương triều trong vùng đang suy yếu.</p>
+  <!-- SLIDE 02 · CONTEXT -->
+  <section class="slide" id="s2" data-transition="pan" aria-hidden="true">
+    <div class="media-layer"><img class="media-image dim-image" src="ban-do-dna.jpg" alt="Bản đồ Đông Nam Á"><div class="image-placeholder">Tài nguyên: ban-do-dna.jpg</div></div>
+    <div class="slide-content">
+      <p class="eyebrow reveal-item">01 / BỐI CẢNH</p>
+      <h2 class="headline reveal-item">Một vị trí chiến lược.<br><em>Vô vàn nguồn lợi.</em></h2>
+      <p class="lead reveal-item">Nằm giữa hai đại dương, giàu tài nguyên và án ngữ những tuyến hàng hải quan trọng, Đông Nam Á trở thành đích ngắm của tư bản phương Tây.</p>
+      <div class="fact-grid three">
+        <article class="fact-card reveal-item"><span class="fact-index">01</span><h3>Nguồn tài nguyên</h3><p>Hương liệu, hồ tiêu, thiếc, gạo, cao su – những mặt hàng có giá trị lớn trong thương mại thế giới.</p></article>
+        <article class="fact-card reveal-item"><span class="fact-index">02</span><h3>Giao điểm hàng hải</h3><p>Các tuyến biển nối Ấn Độ Dương với Thái Bình Dương đi qua khu vực.</p></article>
+        <article class="fact-card reveal-item"><span class="fact-index">03</span><h3>Thời cơ xâm lược</h3><p>Công nghiệp châu Âu cần nguyên liệu, thị trường; nhiều vương triều trong vùng suy yếu.</p></article>
       </div>
+      <div class="slide-foot"><span>ĐÔNG NAM Á TRƯỚC LÀN SÓNG THỰC DÂN</span><span>02 — 12</span></div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- 3. Dòng thời gian xâm lược -->
-<section class="slide" id="s3">
-  <div class="stage t-pan">
-    <div class="c wide">
-      <p class="k r">Phần I. Làn sóng xâm lược</p>
-      <h2 class="r" style="--d:1">Từ thương điếm ven biển đến chiếm trọn lãnh thổ</h2>
-      <ol class="tl">
-        <li class="r" style="--d:1"><b>1511</b><span>Bồ Đào Nha chiếm Malacca</span></li>
-        <li class="r" style="--d:2"><b>1565</b><span>Tây Ban Nha bắt đầu chiếm Philippines</span></li>
-        <li class="r" style="--d:3"><b>1602</b><span>Công ty Đông Ấn Hà Lan ra đời, mở rộng ở Indonesia</span></li>
-        <li class="r" style="--d:4"><b>1786–1824</b><span>Anh chiếm Pênang, Singapore, Malacca</span></li>
-        <li class="r" style="--d:5"><b>1824–1886</b><span>Ba cuộc chiến tranh Anh–Miến, Miến Điện mất độc lập</span></li>
-        <li class="r" style="--d:6"><b>1858–1893</b><span>Pháp xâm lược Việt Nam, Campuchia, Lào</span></li>
-        <li class="r" style="--d:7"><b>1898</b><span>Mỹ thay Tây Ban Nha ở Philippines</span></li>
-      </ol>
+  <!-- SLIDE 03 · TIMELINE -->
+  <section class="slide" id="s3" data-transition="wipe" aria-hidden="true">
+    <div class="slide-content wide-content">
+      <p class="eyebrow reveal-item">02 / LÀN SÓNG XÂM LƯỢC</p>
+      <h2 class="headline reveal-item">Từ thương điếm ven biển<br><em>đến chiếm trọn lãnh thổ.</em></h2>
+      <div class="timeline">
+        <article class="timeline-item reveal-item"><span class="timeline-year">1511</span><span class="timeline-dot"></span><p>Bồ Đào Nha chiếm Malacca.</p></article>
+        <article class="timeline-item reveal-item"><span class="timeline-year">1565</span><span class="timeline-dot"></span><p>Tây Ban Nha bắt đầu chiếm Philippines.</p></article>
+        <article class="timeline-item reveal-item"><span class="timeline-year">1602</span><span class="timeline-dot"></span><p>Công ty Đông Ấn Hà Lan ra đời, mở rộng ở Indonesia.</p></article>
+        <article class="timeline-item reveal-item"><span class="timeline-year">1786—1824</span><span class="timeline-dot"></span><p>Anh mở rộng kiểm soát Pênang, Singapore và Malacca.</p></article>
+        <article class="timeline-item reveal-item"><span class="timeline-year">1824—1886</span><span class="timeline-dot"></span><p>Ba cuộc chiến Anh–Miến; Miến Điện mất độc lập.</p></article>
+        <article class="timeline-item reveal-item"><span class="timeline-year">1858—1893</span><span class="timeline-dot"></span><p>Pháp xâm lược Việt Nam, Campuchia và Lào.</p></article>
+        <article class="timeline-item reveal-item"><span class="timeline-year">1898</span><span class="timeline-dot"></span><p>Mỹ thay Tây Ban Nha ở Philippines.</p></article>
+      </div>
+      <div class="timeline-caption">HÀNH TRÌNH MỞ RỘNG QUYỀN LỰC CỦA CÁC ĐẾ QUỐC</div>
+      <div class="slide-foot"><span>NHỮNG CỘT MỐC QUAN TRỌNG</span><span>03 — 12</span></div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- 4. Bản đồ phân chia -->
-<section class="slide" id="s4">
-  <div class="stage t-wipe">
-    <div class="c split map-split">
-      <figure class="ph frame r" data-file="ban-do-dna.jpg"><img src="ban-do-dna.jpg" alt=""><figcaption>Bản đồ Đông Nam Á cuối thế kỷ XIX</figcaption></figure>
-      <div>
-        <h2 class="r">Cuối thế kỷ XIX, chỉ còn Xiêm giữ được độc lập</h2>
-        <dl class="pairs r" style="--d:2">
-          <dt>Anh</dt><dd>Miến Điện, Mã Lai, Bắc Borneo</dd>
-          <dt>Pháp</dt><dd>Việt Nam, Campuchia, Lào (Liên bang Đông Dương, 1887)</dd>
-          <dt>Hà Lan</dt><dd>Indonesia</dd>
-          <dt>Mỹ</dt><dd>Philippines (từ 1898)</dd>
-          <dt>Bồ Đào Nha</dt><dd>Đông Timor</dd>
+  <!-- SLIDE 04 · MAP -->
+  <section class="slide" id="s4" data-transition="split" aria-hidden="true">
+    <div class="slide-content split-layout">
+      <figure class="map-figure reveal-item"><img class="media-image" src="ban-do-dna.jpg" alt="Bản đồ Đông Nam Á cuối thế kỷ XIX"><figcaption>BẢN ĐỒ ĐÔNG NAM Á CUỐI THẾ KỶ XIX</figcaption><div class="image-placeholder">Tài nguyên: ban-do-dna.jpg</div></figure>
+      <div class="split-copy">
+        <p class="eyebrow reveal-item">03 / BẢN ĐỒ THUỘC ĐỊA</p>
+        <h2 class="headline reveal-item">Cuối thế kỷ XIX,<br><em>Xiêm là ngoại lệ.</em></h2>
+        <dl class="empire-list reveal-item">
+          <div><dt>Anh</dt><dd>Miến Điện, Mã Lai, Bắc Borneo</dd></div>
+          <div><dt>Pháp</dt><dd>Việt Nam, Campuchia, Lào – Liên bang Đông Dương (1887)</dd></div>
+          <div><dt>Hà Lan</dt><dd>Indonesia</dd></div>
+          <div><dt>Mỹ</dt><dd>Philippines (từ 1898)</dd></div>
+          <div><dt>Bồ Đào Nha</dt><dd>Đông Timor</dd></div>
         </dl>
       </div>
+      <div class="slide-foot"><span>SỰ PHÂN CHIA ẢNH HƯỞNG</span><span>04 — 12</span></div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- 5. Chính sách cai trị -->
-<section class="slide paper" id="s5">
-  <div class="stage t-fade">
-    <div class="c wide">
-      <h2 class="r">Chính sách cai trị</h2>
-      <div class="cols">
-        <div class="r" style="--d:1"><h3>Kinh tế</h3><p>Khai thác tài nguyên, lập đồn điền và hầm mỏ, xây đường giao thông phục vụ vận chuyển, thu thuế nặng.</p></div>
-        <div class="r" style="--d:2"><h3>Chính trị</h3><p>Chia để trị; cai trị trực tiếp hoặc qua chế độ bảo hộ, giữ vua quan làm công cụ.</p></div>
-        <div class="r" style="--d:3"><h3>Văn hóa, xã hội</h3><p>Hạn chế giáo dục, truyền bá văn hóa phương Tây; xuất hiện công nhân, tư sản, trí thức mới.</p></div>
+  <!-- SLIDE 05 · RULE -->
+  <section class="slide paper-slide" id="s5" data-transition="curtain" aria-hidden="true">
+    <div class="slide-content wide-content">
+      <p class="eyebrow reveal-item">04 / BỘ MÁY THUỘC ĐỊA</p>
+      <h2 class="headline reveal-item">Cai trị để khai thác.<br><em>Chia rẽ để kiểm soát.</em></h2>
+      <div class="fact-grid three policy-grid">
+        <article class="policy-card reveal-item"><span class="fact-index">01 / KINH TẾ</span><h3>Khai thác thuộc địa</h3><p>Khai thác tài nguyên, lập đồn điền và hầm mỏ, xây dựng giao thông phục vụ vận chuyển, áp đặt thuế nặng.</p></article>
+        <article class="policy-card reveal-item"><span class="fact-index">02 / CHÍNH TRỊ</span><h3>Chia để trị</h3><p>Cai trị trực tiếp hoặc thông qua chế độ bảo hộ; duy trì vua quan bản xứ như công cụ cai trị.</p></article>
+        <article class="policy-card reveal-item"><span class="fact-index">03 / XÃ HỘI</span><h3>Biến đổi xã hội</h3><p>Hạn chế giáo dục, truyền bá văn hóa phương Tây; xuất hiện các tầng lớp công nhân, tư sản và trí thức mới.</p></article>
       </div>
-      <p class="sub r" style="--d:4">Mâu thuẫn dân tộc ngày càng sâu sắc, tạo nền cho các phong trào đấu tranh.</p>
+      <p class="closing-line reveal-item">Mâu thuẫn dân tộc ngày càng sâu sắc, tạo nền tảng cho các phong trào đấu tranh.</p>
+      <div class="slide-foot"><span>CHÍNH SÁCH CAI TRỊ CỦA THỰC DÂN</span><span>05 — 12</span></div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- 6. Phần II: Xiêm -->
-<section class="slide" id="s6">
-  <div class="stage t-zoom">
-    <div class="ph bg dim" data-file="ban-do-xiem.jpg"><img src="ban-do-xiem.jpg" alt=""></div>
-    <div class="c">
-      <p class="k r">Phần II. Xiêm</p>
-      <h2 class="big r" style="--d:1">Giữa Miến Điện thuộc Anh và Đông Dương thuộc Pháp.</h2>
-      <p class="sub r" style="--d:2">Anh và Pháp cần một vùng đệm giữa hai thuộc địa; Xiêm tận dụng thế cân bằng đó, đồng thời tự cải cách để không bị xâu xé.</p>
+  <!-- SLIDE 06 · SIAM -->
+  <section class="slide" id="s6" data-transition="zoom" aria-hidden="true">
+    <div class="media-layer"><img class="media-image dim-image" src="ban-do-xiem.jpg" alt="Bản đồ Xiêm"><div class="image-placeholder">Tài nguyên: ban-do-xiem.jpg</div></div>
+    <div class="slide-content centered-copy">
+      <p class="eyebrow reveal-item">05 / TRƯỜNG HỢP XIÊM</p>
+      <h2 class="hero-statement reveal-item">Giữa hai gọng kìm<br><em>Anh và Pháp.</em></h2>
+      <p class="lead reveal-item">Anh kiểm soát Miến Điện, Pháp mở rộng ở Đông Dương. Xiêm đứng giữa hai vùng ảnh hưởng và tìm cách bảo vệ nền độc lập bằng cải cách trong nước cùng ngoại giao cân bằng.</p>
+      <div class="slide-foot"><span>MỘT CON ĐƯỜNG KHÁC BIỆT</span><span>06 — 12</span></div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- 7. Cải cách Rama V -->
-<section class="slide" id="s7">
-  <div class="stage t-curtain">
-    <div class="c split">
-      <!-- Vùng 3D: sau này có thể thay bằng ảnh/video render nhân vật hoặc tích hợp mô hình GLB -->
-      <figure class="ph frame tall r" data-file="chulalongkorn.jpg"><img src="chulalongkorn.jpg" alt=""><figcaption>Vua Chulalongkorn (Rama V), trị vì 1868–1910</figcaption></figure>
-      <div>
-        <h2 class="r">Cải cách theo mô hình phương Tây</h2>
-        <dl class="pairs r" style="--d:2">
-          <dt>Hành chính</dt><dd>Lập các bộ, tập trung quyền lực về triều đình</dd>
-          <dt>Xã hội</dt><dd>Từng bước xóa bỏ chế độ nô lệ</dd>
-          <dt>Kinh tế</dt><dd>Mở cửa thương mại, xây đường sắt, bưu điện</dd>
-          <dt>Quân sự, giáo dục</dt><dd>Tổ chức quân đội và trường học kiểu phương Tây</dd>
-          <dt>Ngoại giao</dt><dd>Mềm dẻo, cân bằng giữa Anh và Pháp</dd>
+  <!-- SLIDE 07 · 3D CHARACTER -->
+  <section class="slide" id="s7" data-transition="depth" aria-hidden="true">
+    <div class="slide-content split-layout character-layout">
+      <div class="model-panel reveal-item">
+        <div class="model-aura"></div>
+        <model-viewer src="nhan-vat-lich-su.glb" poster="chulalongkorn.jpg" alt="Mô hình 3D nhân vật lịch sử" camera-controls auto-rotate auto-rotate-delay="1200" rotation-per-second="12deg" shadow-intensity="1" exposure="1" environment-image="neutral" loading="eager" interaction-prompt="auto">
+        </model-viewer>
+        <span class="model-caption">KHÔNG GIAN TRƯNG BÀY NHÂN VẬT 3D · KÉO ĐỂ XOAY</span>
+      </div>
+      <div class="split-copy character-copy">
+        <p class="eyebrow reveal-item">06 / NHÂN VẬT LỊCH SỬ</p>
+        <span class="character-number reveal-item">01</span>
+        <h2 class="headline reveal-item">Chulalongkorn<br><em>Rama V</em></h2>
+        <p class="character-dates reveal-item">Vua Xiêm · Trị vì 1868—1910</p>
+        <p class="lead reveal-item">Nhà vua gắn liền với công cuộc cải cách và hiện đại hóa Xiêm trong bối cảnh sức ép ngày càng lớn từ các đế quốc phương Tây.</p>
+        <dl class="empire-list compact-list reveal-item">
+          <div><dt>Hành chính</dt><dd>Lập các bộ, tập trung quyền lực về triều đình.</dd></div>
+          <div><dt>Xã hội</dt><dd>Từng bước xóa bỏ chế độ nô lệ.</dd></div>
+          <div><dt>Kinh tế</dt><dd>Mở cửa thương mại, xây đường sắt và bưu điện.</dd></div>
+          <div><dt>Quân sự – giáo dục</dt><dd>Tổ chức quân đội và trường học theo mô hình phương Tây.</dd></div>
+          <div><dt>Ngoại giao</dt><dd>Mềm dẻo, cân bằng giữa Anh và Pháp.</dd></div>
         </dl>
       </div>
+      <div class="slide-foot"><span>NHÂN VẬT TRUNG TÂM CỦA CÔNG CUỘC CẢI CÁCH</span><span>07 — 12</span></div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- 8. Kết quả và cái giá -->
-<section class="slide" id="s8">
-  <div class="stage t-pan">
-    <div class="c split">
-      <div>
-        <p class="k r">Kết quả</p>
-        <h2 class="big r" style="--d:1">Xiêm giữ được độc lập, nhưng phải trả giá.</h2>
+  <!-- SLIDE 08 · PRICE -->
+  <section class="slide" id="s8" data-transition="pan" aria-hidden="true">
+    <div class="slide-content wide-content">
+      <p class="eyebrow reveal-item">07 / CÁI GIÁ CỦA ĐỘC LẬP</p>
+      <h2 class="headline reveal-item">Xiêm giữ được độc lập,<br><em>nhưng phải nhượng bộ.</em></h2>
+      <div class="concession-list">
+        <article class="concession reveal-item"><span class="concession-date">1893</span><div><h3>Nhượng vùng tả ngạn Mê Công</h3><p>Nhường vùng đất thuộc Lào cho Pháp.</p></div></article>
+        <article class="concession reveal-item"><span class="concession-date">1904—1907</span><div><h3>Tiếp tục nhượng đất</h3><p>Nhường thêm một số vùng đất ở Lào và Campuchia cho Pháp.</p></div></article>
+        <article class="concession reveal-item"><span class="concession-date">1909</span><div><h3>Nhượng bốn bang Mã Lai</h3><p>Nhường quyền kiểm soát cho Anh.</p></div></article>
+        <article class="concession reveal-item"><span class="concession-date">KINH TẾ</span><div><h3>Sức ép và lệ thuộc</h3><p>Chịu những ràng buộc và lệ thuộc nhất định vào Anh, Pháp.</p></div></article>
       </div>
-      <dl class="pairs r" style="--d:2">
-        <dt>1893</dt><dd>Nhường vùng tả ngạn sông Mê Công (Lào) cho Pháp</dd>
-        <dt>1904–1907</dt><dd>Nhường thêm đất Lào và Campuchia cho Pháp</dd>
-        <dt>1909</dt><dd>Nhường bốn bang Mã Lai cho Anh</dd>
-        <dt>Kinh tế</dt><dd>Chịu những ràng buộc và lệ thuộc nhất định vào Anh, Pháp</dd>
-      </dl>
+      <div class="slide-foot"><span>ĐỘC LẬP ĐI KÈM NHỮNG NHƯỢNG BỘ</span><span>08 — 12</span></div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- 9. Ý nghĩa và đánh giá -->
-<section class="slide paper" id="s9">
-  <div class="stage t-fade">
-    <div class="c wide">
-      <p class="k r">Ý nghĩa và đánh giá</p>
-      <h2 class="big r" style="--d:1">Vì sao Xiêm khác các nước láng giềng?</h2>
-      <div class="cols">
-        <div class="r" style="--d:2"><h3>Cải cách từ trên xuống</h3><p>Hiện đại hóa bộ máy, quân đội, kinh tế để tăng sức tự vệ.</p></div>
-        <div class="r" style="--d:3"><h3>Ngoại giao khéo léo</h3><p>Nhượng bộ có chọn lọc, lợi dụng mâu thuẫn Anh–Pháp.</p></div>
-        <div class="r" style="--d:4"><h3>Vị thế vùng đệm</h3><p>Hai cường quốc thỏa thuận (1896) không để đối phương chiếm Xiêm.</p></div>
+  <!-- SLIDE 09 · ANALYSIS -->
+  <section class="slide paper-slide" id="s9" data-transition="curtain" aria-hidden="true">
+    <div class="slide-content wide-content">
+      <p class="eyebrow reveal-item">08 / LÝ GIẢI LỊCH SỬ</p>
+      <h2 class="headline reveal-item">Vì sao Xiêm khác<br><em>các nước láng giềng?</em></h2>
+      <div class="fact-grid three analysis-grid">
+        <article class="analysis-card reveal-item"><span class="fact-index">01</span><h3>Cải cách từ trên xuống</h3><p>Hiện đại hóa bộ máy, quân đội và kinh tế nhằm tăng năng lực tự vệ.</p></article>
+        <article class="analysis-card reveal-item"><span class="fact-index">02</span><h3>Ngoại giao khéo léo</h3><p>Nhượng bộ có chọn lọc, tận dụng mâu thuẫn và cạnh tranh giữa Anh – Pháp.</p></article>
+        <article class="analysis-card reveal-item"><span class="fact-index">03</span><h3>Vị thế vùng đệm</h3><p>Thỏa thuận Anh – Pháp năm 1896 góp phần duy trì vị thế vùng đệm của Xiêm.</p></article>
       </div>
+      <div class="slide-foot"><span>BA YẾU TỐ TẠO NÊN SỰ KHÁC BIỆT</span><span>09 — 12</span></div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- 10. Câu hỏi (details/summary: tương tác bằng HTML thuần) -->
-<section class="slide" id="s10">
-  <div class="stage t-fade">
-    <div class="c">
-      <p class="k r">Củng cố</p>
-      <div class="qa r" style="--d:1">
-        <h2>Câu 1. Nêu những chính sách cai trị chủ yếu của thực dân ở Đông Nam Á.</h2>
-        <details><summary>Xem đáp án</summary><p>Khai thác kinh tế (đồn điền, hầm mỏ, thuế), chia để trị về chính trị, hạn chế giáo dục và áp đặt văn hóa ở lĩnh vực văn hóa, xã hội.</p></details>
+  <!-- SLIDE 10 · REVIEW -->
+  <section class="slide" id="s10" data-transition="wipe" aria-hidden="true">
+    <div class="slide-content review-content">
+      <p class="eyebrow reveal-item">09 / KIỂM TRA KIẾN THỨC</p>
+      <h2 class="headline reveal-item">Bạn đã nắm được<br><em>bức tranh lịch sử?</em></h2>
+      <div class="question-list">
+        <article class="question-card reveal-item"><span class="question-no">01</span><div><h3>Nêu những chính sách cai trị chủ yếu của thực dân ở Đông Nam Á.</h3><details><summary>Khám phá gợi ý trả lời <span>＋</span></summary><p>Khai thác kinh tế (đồn điền, hầm mỏ, thuế); chia để trị về chính trị; hạn chế giáo dục và áp đặt văn hóa trong lĩnh vực văn hóa – xã hội.</p></details></div></article>
+        <article class="question-card reveal-item"><span class="question-no">02</span><div><h3>Vì sao Xiêm là nước duy nhất ở Đông Nam Á không bị biến thành thuộc địa?</h3><details><summary>Khám phá gợi ý trả lời <span>＋</span></summary><p>Nhờ cải cách của vua Chulalongkorn, chính sách ngoại giao mềm dẻo và vị thế vùng đệm giữa hai thuộc địa của Anh và Pháp; đổi lại, Xiêm phải nhượng một phần lãnh thổ.</p></details></div></article>
       </div>
-      <div class="qa r" style="--d:2">
-        <h2>Câu 2. Vì sao Xiêm là nước duy nhất ở Đông Nam Á không bị biến thành thuộc địa?</h2>
-        <details><summary>Xem đáp án</summary><p>Nhờ cải cách của vua Chulalongkorn, chính sách ngoại giao mềm dẻo và vị thế vùng đệm giữa hai thuộc địa của Anh và Pháp; cái giá là mất một phần lãnh thổ.</p></details>
-      </div>
+      <div class="slide-foot"><span>HÃY THỬ TỰ TRẢ LỜI TRƯỚC KHI MỞ GỢI Ý</span><span>10 — 12</span></div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- 11. Kết -->
-<section class="slide" id="s11">
-  <div class="stage t-fade">
-    <div class="c end">
-      <div class="ring" aria-hidden="true"></div>
-      <div>
-        <h2 class="big r">Thực dân hóa không chỉ là chiếm đất. Nó mở đầu cho cuộc đấu tranh giành lại độc lập của cả khu vực.</h2>
-        <p class="sub r" style="--d:2">Cảm ơn thầy cô và các bạn đã lắng nghe.</p>
-      </div>
+  <!-- SLIDE 11 · CONCLUSION -->
+  <section class="slide final-thought" id="s11" data-transition="cinematic" aria-hidden="true">
+    <div class="final-orbit" aria-hidden="true"><span></span><span></span><span></span></div>
+    <div class="slide-content conclusion-content">
+      <p class="eyebrow reveal-item">10 / DI SẢN LỊCH SỬ</p>
+      <p class="conclusion-kicker reveal-item">LỊCH SỬ KHÔNG CHỈ LÀ NHỮNG ĐƯỜNG BIÊN.</p>
+      <h2 class="conclusion-title reveal-item">Đó còn là câu chuyện<br>về <em>ý chí độc lập</em><br>của cả một khu vực.</h2>
+      <p class="conclusion-sub reveal-item">Thực dân hóa mở đầu cho một thời kỳ đấu tranh lâu dài để giành lại quyền tự quyết.</p>
+      <div class="conclusion-sign reveal-item"><span>NAMOUSIME / HISTORY ARCHIVE</span><span>11 — 12</span></div>
     </div>
-  </div>
-</section>
+  </section>
 
+  <!-- SLIDE 12 · MEMBER TRADING CARDS -->
+  <section class="slide legacy-slide" id="s12" data-transition="depth" aria-hidden="true">
+    <div class="slide-content legacy-content">
+      <p class="eyebrow reveal-item">THE PEOPLE BEHIND THE STORY</p>
+      <h2 class="legacy-title reveal-item">Mỗi dấu ấn đều<br><em>có người tạo nên.</em></h2>
+      <p class="legacy-intro reveal-item">NHỮNG GƯƠNG MẶT ĐỨNG SAU HỒ SƠ LỊCH SỬ NÀY</p>
+      <div class="member-grid">
+        <!-- Thay ảnh và thông tin thành viên tại các thẻ bên dưới. Có thể nhân bản article để thêm thành viên. -->
+        <article class="member-card reveal-item" style="--card-index:0">
+          <div class="member-image-wrap"><img src="thanh-vien-01.png" alt="Ảnh thành viên 01"><span class="member-image-placeholder">ẢNH THÀNH VIÊN 01</span><span class="member-holo"></span></div>
+          <div class="member-info"><span class="member-role">THE DIRECTOR</span><h3>TÊN THÀNH VIÊN</h3><p>Vai trò / đóng góp</p><span class="member-serial">ARCHIVE Nº 001</span></div>
+        </article>
+        <article class="member-card reveal-item" style="--card-index:1">
+          <div class="member-image-wrap"><img src="thanh-vien-02.png" alt="Ảnh thành viên 02"><span class="member-image-placeholder">ẢNH THÀNH VIÊN 02</span><span class="member-holo"></span></div>
+          <div class="member-info"><span class="member-role">THE RESEARCHER</span><h3>TÊN THÀNH VIÊN</h3><p>Vai trò / đóng góp</p><span class="member-serial">ARCHIVE Nº 002</span></div>
+        </article>
+        <article class="member-card reveal-item" style="--card-index:2">
+          <div class="member-image-wrap"><img src="thanh-vien-03.png" alt="Ảnh thành viên 03"><span class="member-image-placeholder">ẢNH THÀNH VIÊN 03</span><span class="member-holo"></span></div>
+          <div class="member-info"><span class="member-role">THE STORYTELLER</span><h3>TÊN THÀNH VIÊN</h3><p>Vai trò / đóng góp</p><span class="member-serial">ARCHIVE Nº 003</span></div>
+        </article>
+        <article class="member-card reveal-item" style="--card-index:3">
+          <div class="member-image-wrap"><img src="thanh-vien-04.png" alt="Ảnh thành viên 04"><span class="member-image-placeholder">ẢNH THÀNH VIÊN 04</span><span class="member-holo"></span></div>
+          <div class="member-info"><span class="member-role">THE CREATOR</span><h3>TÊN THÀNH VIÊN</h3><p>Vai trò / đóng góp</p><span class="member-serial">ARCHIVE Nº 004</span></div>
+        </article>
+      </div>
+      <p class="legacy-thanks reveal-item">CẢM ƠN THẦY CÔ VÀ CÁC BẠN ĐÃ THEO DÕI.</p>
+      <div class="slide-foot"><span>END OF PRESENTATION · NAMOUSIME</span><span>12 — 12</span></div>
+    </div>
+  </section>
+
+  <nav class="slide-controls" aria-label="Điều khiển trình chiếu">
+    <button class="nav-arrow prev" id="prevSlide" type="button" aria-label="Slide trước" title="Slide trước (←)">‹</button>
+    <div class="control-center"><span class="current-count" id="currentCount">01</span><span class="count-divider">/</span><span class="total-count" id="totalCount">12</span><div class="mini-progress"><span id="miniProgress"></span></div></div>
+    <button class="nav-arrow next" id="nextSlide" type="button" aria-label="Slide tiếp theo" title="Slide tiếp theo (→)">›</button>
+  </nav>
+  <div class="utility-controls">
+    <button id="overviewBtn" class="utility-btn" type="button" aria-label="Xem tổng quan slide" title="Tổng quan">▦</button>
+    <button id="fullscreenBtn" class="utility-btn" type="button" aria-label="Toàn màn hình" title="Toàn màn hình">⛶</button>
+  </div>
+  <div class="keyboard-hint">DÙNG <kbd>←</kbd> <kbd>→</kbd> HOẶC <kbd>SPACE</kbd> ĐỂ DI CHUYỂN</div>
+  <div class="overview" id="overview" aria-hidden="true">
+    <div class="overview-head"><span>CHỌN SLIDE</span><button id="closeOverview" type="button" aria-label="Đóng tổng quan">×</button></div>
+    <div class="overview-grid" id="overviewGrid"></div>
+  </div>
+  <div class="transition-curtain" id="transitionCurtain" aria-hidden="true"></div>
 </main>
+
+<script>
+(() => {
+  "use strict";
+  const deck = document.getElementById("presentation");
+  const slides = Array.from(document.querySelectorAll(".slide"));
+  document.querySelectorAll("img").forEach(image => {
+    const hideIfMissing = () => { image.style.visibility = "hidden"; };
+    image.addEventListener("error", hideIfMissing, { once: true });
+    if (image.complete && image.naturalWidth === 0) hideIfMissing();
+  });
+  const prev = document.getElementById("prevSlide");
+  const next = document.getElementById("nextSlide");
+  const currentCount = document.getElementById("currentCount");
+  const totalCount = document.getElementById("totalCount");
+  const progressFill = document.getElementById("progressFill");
+  const miniProgress = document.getElementById("miniProgress");
+  const curtain = document.getElementById("transitionCurtain");
+  const overview = document.getElementById("overview");
+  const overviewGrid = document.getElementById("overviewGrid");
+  let current = 0;
+  let busy = false;
+  let touchStartX = 0;
+  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  totalCount.textContent = String(slides.length).padStart(2, "0");
+
+  slides.forEach((slide, index) => {
+    const title = slide.querySelector("h1, h2")?.innerText.replace(/\s+/g, " ").trim() || `Slide ${index + 1}`;
+    const tile = document.createElement("button");
+    tile.type = "button";
+    tile.className = "overview-tile";
+    tile.innerHTML = `<span class="overview-number">${String(index + 1).padStart(2, "0")}</span><span class="overview-title"></span>`;
+    tile.querySelector(".overview-title").textContent = title;
+    tile.addEventListener("click", () => { closeOverview(); goTo(index); });
+    overviewGrid.appendChild(tile);
+  });
+
+  function updateUI() {
+    currentCount.textContent = String(current + 1).padStart(2, "0");
+    const percent = ((current + 1) / slides.length) * 100;
+    progressFill.style.width = `${percent}%`;
+    miniProgress.style.width = `${percent}%`;
+    prev.disabled = current === 0;
+    next.disabled = current === slides.length - 1;
+    overviewGrid.querySelectorAll(".overview-tile").forEach((tile, i) => {
+      tile.classList.toggle("is-current", i === current);
+      tile.setAttribute("aria-current", i === current ? "true" : "false");
+    });
+  }
+
+  function animateEntrance(slide) {
+    const items = slide.querySelectorAll(".reveal-item");
+    if (reducedMotion) {
+      items.forEach(item => { item.style.opacity = "1"; item.style.transform = "none"; });
+      return;
+    }
+    if (window.gsap) {
+      gsap.killTweensOf(items);
+      gsap.fromTo(items,
+        { opacity: 0, y: 24, filter: "blur(7px)" },
+        { opacity: 1, y: 0, filter: "blur(0px)", duration: 0.82, stagger: 0.085, ease: "power3.out", clearProps: "all" }
+      );
+    } else {
+      items.forEach((item, i) => {
+        item.animate(
+          [{ opacity: 0, transform: "translateY(24px)", filter: "blur(7px)" }, { opacity: 1, transform: "translateY(0)", filter: "blur(0)" }],
+          { duration: 720, delay: i * 75, easing: "cubic-bezier(.2,.75,.2,1)", fill: "both" }
+        );
+      });
+    }
+  }
+
+  function goTo(target) {
+    if (busy || target < 0 || target >= slides.length || target === current) return;
+    busy = true;
+    const oldSlide = slides[current];
+    const newSlide = slides[target];
+    const direction = target > current ? 1 : -1;
+    const transition = newSlide.dataset.transition || "cinematic";
+    oldSlide.classList.remove("is-active");
+    oldSlide.classList.add("is-leaving");
+    oldSlide.setAttribute("aria-hidden", "true");
+    newSlide.classList.add("is-active", `enter-${transition}`, direction > 0 ? "from-next" : "from-prev");
+    newSlide.setAttribute("aria-hidden", "false");
+    current = target;
+    updateUI();
+
+    if (window.gsap && !reducedMotion) {
+      gsap.fromTo(curtain, { scaleY: 0, transformOrigin: direction > 0 ? "bottom" : "top" },
+        { scaleY: 1, duration: 0.28, ease: "power3.inOut", yoyo: true, repeat: 1, onComplete: () => {
+          curtain.style.transform = "scaleY(0)";
+          curtain.classList.remove("active");
+        }});
+    } else if (!reducedMotion) {
+      curtain.classList.add("active");
+      window.setTimeout(() => curtain.classList.remove("active"), 420);
+    }
+
+    animateEntrance(newSlide);
+    const duration = reducedMotion ? 30 : 760;
+    window.setTimeout(() => {
+      oldSlide.classList.remove("is-leaving");
+      newSlide.classList.remove("enter-cinematic", "enter-pan", "enter-wipe", "enter-split", "enter-curtain", "enter-zoom", "enter-depth", "from-next", "from-prev");
+      busy = false;
+    }, duration);
+  }
+
+  function openOverview() {
+    overview.classList.add("is-open");
+    overview.setAttribute("aria-hidden", "false");
+    document.getElementById("closeOverview").focus();
+  }
+  function closeOverview() {
+    overview.classList.remove("is-open");
+    overview.setAttribute("aria-hidden", "true");
+  }
+
+  prev.addEventListener("click", () => goTo(current - 1));
+  next.addEventListener("click", () => goTo(current + 1));
+  document.getElementById("overviewBtn").addEventListener("click", openOverview);
+  document.getElementById("closeOverview").addEventListener("click", closeOverview);
+  document.getElementById("fullscreenBtn").addEventListener("click", async () => {
+    try {
+      if (!document.fullscreenElement) await deck.requestFullscreen();
+      else await document.exitFullscreen();
+    } catch (error) {
+      console.warn("Trình duyệt không cho phép bật toàn màn hình:", error);
+    }
+  });
+
+  document.addEventListener("keydown", event => {
+    if (event.altKey || event.ctrlKey || event.metaKey) return;
+    if (event.key === "Escape" && overview.classList.contains("is-open")) { closeOverview(); return; }
+    if (overview.classList.contains("is-open")) return;
+    if (["ArrowRight", "PageDown", " "].includes(event.key)) { event.preventDefault(); goTo(current + 1); }
+    if (["ArrowLeft", "PageUp"].includes(event.key)) { event.preventDefault(); goTo(current - 1); }
+    if (event.key === "Home") { event.preventDefault(); goTo(0); }
+    if (event.key === "End") { event.preventDefault(); goTo(slides.length - 1); }
+  });
+
+  deck.addEventListener("touchstart", event => { touchStartX = event.changedTouches[0].screenX; }, { passive: true });
+  deck.addEventListener("touchend", event => {
+    const delta = event.changedTouches[0].screenX - touchStartX;
+    if (Math.abs(delta) > 65) goTo(current + (delta < 0 ? 1 : -1));
+  }, { passive: true });
+
+  updateUI();
+  animateEntrance(slides[0]);
+})();
+</script>
 </body>
 </html>
