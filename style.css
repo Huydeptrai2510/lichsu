@@ -1,0 +1,112 @@
+/* Bảng màu: than, nâu cổ, vàng kim nhạt, giấy bản đồ cũ, trắng ngà */
+:root{--coal:#14110d;--umber:#3a2a1c;--gold:#d3b472;--paper:#d9c8a1;--ivory:#f3ecda;--ink:#2a1f14;
+--serif:"Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua",Georgia,"Times New Roman",serif;
+--sans:"Segoe UI",system-ui,"Helvetica Neue",Arial,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-snap-type:y mandatory;scroll-behavior:smooth;background:var(--coal)}
+body{font:clamp(15px,1.45vw,26px)/1.55 var(--sans);color:var(--ivory);background:var(--coal)}
+
+/* Khung hình 16:9 */
+.slide{position:relative;height:100svh;overflow:hidden;scroll-snap-align:start;background:var(--coal)}
+.stage{position:relative;height:100%;display:grid;align-content:center;padding:7vh 7vw}
+.c{position:relative;z-index:1;max-width:62em}
+.c.wide{max-width:none}
+.paper{background:var(--paper);color:var(--ink);--gold:#7a4d1a}
+.paper .stage{background:var(--paper)}
+
+/* Chữ */
+h1,h2,h3,dt,.k,.tl b{font-family:var(--serif);font-weight:600;letter-spacing:0}
+h1{font-size:clamp(2.4rem,6.6vw,8rem);line-height:1.05;margin:.3em 0 .4em}
+h2{font-size:clamp(1.7rem,3.4vw,4rem);line-height:1.18}
+h2.big{font-size:clamp(1.9rem,4.2vw,5rem);max-width:20em}
+h3{font-size:1.35em;color:var(--gold);margin-bottom:.4em}
+.k{font-style:italic;font-weight:400;font-size:1.15em;color:var(--gold);margin-bottom:.8em}
+.sub{margin-top:1.4em;max-width:36em;opacity:.92}
+.paper .sub{opacity:1}
+p{max-width:40em}
+
+/* Vùng ảnh/video: placeholder nằm dưới, tệp thật phủ lên khi có */
+.ph{position:relative;background:repeating-linear-gradient(135deg,#2a2016 0 16px,#30251a 16px 32px)}
+.ph::before{content:"Thay bằng: " attr(data-file);position:absolute;left:12px;bottom:10px;z-index:0;font:italic .8em var(--serif);color:var(--gold);opacity:.85}
+.ph img,.ph video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;background:transparent}
+.bg{position:absolute;inset:0}
+.bg::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(20,17,13,.9),rgba(20,17,13,.45) 70%,rgba(20,17,13,.25))}
+.bg.dim::after{background:rgba(20,17,13,.78)}
+.frame{aspect-ratio:4/3;border:1px solid var(--gold);padding:0}
+.frame.tall{aspect-ratio:3/4;max-height:76vh;justify-self:center}
+figcaption{position:absolute;left:0;right:0;bottom:0;z-index:2;padding:.5em .8em;font:italic .8em var(--serif);background:rgba(20,17,13,.7)}
+.frame::before{bottom:2.6em}
+
+/* Bố cục */
+.split{display:grid;grid-template-columns:1.1fr 1fr;gap:5vw;align-items:center}
+.map-split{grid-template-columns:1.25fr 1fr}
+.trio{display:grid;grid-template-columns:repeat(3,1fr);gap:3vw;margin-top:5vh;padding-top:2.5vh;border-top:1px solid var(--gold)}
+.cols{display:grid;grid-template-columns:repeat(3,1fr);margin-top:4vh}
+.cols>div{padding:0 2.4vw;border-left:1px solid var(--gold)}
+.cols>div:first-child{padding-left:0;border-left:0}
+.pairs{display:grid;grid-template-columns:max-content 1fr;gap:1.4vh 1.8vw;margin-top:3vh}
+.pairs dt{color:var(--gold);font-size:1.15em}
+.tl{display:grid;grid-template-columns:repeat(7,1fr);list-style:none;margin-top:9vh;border-top:2px solid var(--gold)}
+.tl li{position:relative;padding:2.4vh 1.2vw 0 0}
+.tl li::before{content:"";position:absolute;top:-7px;left:0;width:12px;height:12px;border-radius:50%;background:var(--gold)}
+.tl b{display:block;font-size:1.55em;color:var(--gold)}
+.tl span{display:block;font-size:.85em;margin-top:.3em}
+.qa{margin-bottom:4vh}
+.qa h2{font-size:clamp(1.3rem,2.4vw,2.8rem)}
+summary{display:inline-block;margin-top:1.2vh;cursor:pointer;color:var(--gold);font:italic 1.05em var(--serif)}
+summary:focus-visible{outline:2px solid var(--gold);outline-offset:4px}
+details[open] p{margin-top:.8vh;animation:fin .6s both}
+.end{display:grid;grid-template-columns:auto 1fr;gap:5vw;align-items:center;max-width:none}
+.ring{width:min(36vh,26vw);aspect-ratio:1;border:2px solid var(--gold);border-radius:50%;box-shadow:inset 0 0 0 1.4vh var(--coal),inset 0 0 0 calc(1.4vh + 2px) var(--gold)}
+
+/* Mở đầu: hiệu ứng theo thời gian khi tải trang (đạo diễn bằng animation-delay).
+   Trạng thái gốc luôn hiển thị; "from" mới ẩn, nên tắt animation vẫn thấy đủ nội dung. */
+@keyframes push{to{scale:2.6;translate:-13% -9%}}
+@keyframes fin{from{opacity:0}}
+@keyframes up{from{opacity:0;translate:0 3vh}}
+.globe{position:absolute;left:50%;top:50%;width:min(62vh,50vw);aspect-ratio:1;margin:calc(min(62vh,50vw)/-2) 0 0 calc(min(62vh,50vw)/-2);border-radius:50%;
+background:radial-gradient(circle at 34% 30%,#6c5a3e,#2d2418 55%,#0c0a07 100%);box-shadow:0 0 6vh rgba(211,180,114,.25);animation:push 7s cubic-bezier(.5,0,.2,1) both}
+.intro .map{animation:fin 3s 5.5s both}
+.intro .map::before{display:none}
+.l1{animation:up 1.2s 7.5s both}.l2{animation:up 1.6s 8.2s both}.l3{animation:up 1.2s 9.8s both}
+
+/* Thanh tiến độ và hiệu ứng cuộn: chỉ bật khi trình duyệt hỗ trợ animation-timeline.
+   Nếu không hỗ trợ, các slide vẫn hiển thị tĩnh, đầy đủ nội dung. */
+.bar{position:fixed;left:0;top:0;z-index:9;width:100%;height:3px;background:var(--gold);transform-origin:0 50%;scale:0 1}
+@supports (animation-timeline:view()){
+  @keyframes grow{to{scale:1 1}}
+  @keyframes rise{from{opacity:0;translate:0 4vh}}
+  @keyframes fade{from{opacity:0}}
+  @keyframes wipe{from{clip-path:inset(0 100% 0 0)}}
+  @keyframes curtain{from{clip-path:inset(0 50% 0 50%)}}
+  @keyframes zoom{from{opacity:0;scale:1.12}}
+  @keyframes pan{from{opacity:0;translate:7% 0}}
+  .bar{animation:grow linear both;animation-timeline:scroll(root)}
+  .r{animation:rise linear both;animation-timeline:view();animation-range:entry 0% entry calc(55% + var(--d,0)*6%)}
+  .t-fade{animation:fade linear both;animation-timeline:view();animation-range:entry 0% entry 70%}
+  .t-wipe{animation:wipe linear both;animation-timeline:view();animation-range:entry 0% entry 85%}
+  .t-curtain{animation:curtain linear both;animation-timeline:view();animation-range:entry 0% entry 85%}
+  .t-zoom{animation:zoom linear both;animation-timeline:view();animation-range:entry 0% entry 90%}
+  .t-pan{animation:pan linear both;animation-timeline:view();animation-range:entry 0% entry 85%}
+  .intro .r{animation:none}
+}
+
+/* Màn hình nhỏ / dọc */
+@media (max-width:860px),(max-aspect-ratio:1/1){
+  html{scroll-snap-type:y proximity}
+  .slide{height:auto;min-height:100svh}
+  .stage{min-height:100svh;padding:8vh 6vw}
+  .split,.map-split,.trio,.cols,.end{grid-template-columns:1fr}
+  .cols>div{padding:2vh 0 0;margin-top:2vh;border-left:0;border-top:1px solid var(--gold)}
+  .cols>div:first-child{border-top:0;margin-top:0}
+  .tl{grid-template-columns:1fr 1fr;row-gap:3vh}
+  .frame.tall{max-height:60vh}
+  .ring{width:40vw}
+  h1{font-size:clamp(2.2rem,11vw,4rem)}
+}
+
+/* Giảm chuyển động theo yêu cầu của người xem */
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important}
+}
